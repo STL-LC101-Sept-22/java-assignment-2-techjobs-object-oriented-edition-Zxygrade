@@ -4,6 +4,18 @@ import java.util.Objects;
 
 public class CoreCompetency {
 
+    public String getValue() {
+        return value;
+    }
+
+    public void setValue(String value) {
+        this.value = value;
+    }
+
+    public int getId() {
+        return id;
+    }
+
     private int id;
     private static int nextId = 1;
     private String value;
