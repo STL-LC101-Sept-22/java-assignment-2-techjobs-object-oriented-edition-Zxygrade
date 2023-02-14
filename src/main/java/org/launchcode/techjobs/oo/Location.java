@@ -8,7 +8,7 @@ public class Location {
 
     private int id;
     private static int nextId = 1;
-    private String value;
+    private static String value;
 
     public Location() {
         id = nextId;
@@ -40,7 +40,7 @@ public Location(String value){
     @Override
     public int hashCode() {
         return Objects.hash(getId());
-    }+
+    }
 
     // Getters and Setters:
 
@@ -48,7 +48,7 @@ public Location(String value){
         return id;
     }
 
-    public String getValue() {
+    public static String getValue() {
         return value;
     }
 

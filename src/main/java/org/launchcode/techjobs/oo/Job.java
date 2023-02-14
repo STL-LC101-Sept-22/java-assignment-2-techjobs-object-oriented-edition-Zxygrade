@@ -8,8 +8,8 @@ public class Job {
     private static int nextId = 1;
 private String value;
 
-    private String name;
-    private Employer employer;
+    private static String name;
+    private static Employer employer;
     private Location location;
     private PositionType positionType;
     private CoreCompetency coreCompetency;
@@ -21,17 +21,17 @@ private String value;
     // TODO: Add two constructors - one to initialize a unique ID and a second to initialize the
     //  other five fields. The second constructor should also call the first in order to initialize
     //  the 'id' field.
-public void Job(){
+public Job(){
     id = nextId;
     nextId ++;
 }
-public void Job(String name, Employer employer, Location location, PositionType positionType, CoreCompetency coreCompetency) {
-   this();
+public Job(String name, Employer anEmployer, Location aLocation, PositionType aPositionType, CoreCompetency aCoreCompetency) {
+        this();
     this.name = name;
-    this.employer = employer;
-    this.location = location;
-    this.positionType = positionType;
-    this.coreCompetency = coreCompetency;
+    this.employer = anEmployer;
+    this.location = aLocation;
+    this.positionType = aPositionType;
+    this.coreCompetency = aCoreCompetency;
 }
 
     public String getValue() {
@@ -42,7 +42,7 @@ public void Job(String name, Employer employer, Location location, PositionType 
         this.value = value;
     }
 
-    public String getName() {
+    public static String getName() {
         return name;
     }
 
@@ -50,7 +50,7 @@ public void Job(String name, Employer employer, Location location, PositionType 
         this.name = name;
     }
 
-    public Employer getEmployer() {
+    public static Employer getEmployer() {
         return employer;
     }
 
